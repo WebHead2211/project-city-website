@@ -99,6 +99,7 @@
 
 .filter-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   div {
     display: flex;
@@ -165,10 +166,8 @@
 }
 
 @media only screen and (max-width: 880px) {
-  .filter-sort-container {
-    .filter-container {
-      flex-direction: column;
-    }
+  .filter-container {
+    flex-direction: column;
   }
 }
 
@@ -178,9 +177,9 @@
       font-size: 14px;
     }
 
-    .filter-container {
-      flex-direction: column;
-    }
+  }
+  .filter-container {
+    flex-direction: column;
   }
 
   .hotel-list-item {
