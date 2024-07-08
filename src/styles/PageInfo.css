@@ -1,0 +1,256 @@
+.page-info-container {
+  align-items: center;
+  display: flex;
+  width: 100vw;
+  height: fit-content;
+  margin: auto;
+  #page-info-image-container,
+  #page-info-text-container {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+}
+
+#page-info-image-container {
+  background-color: var(--blue-primary);
+  position: relative;
+
+  .page-info-image-background {
+    height: 70vh;
+    width: 70vw;
+    border-radius: 12px;
+    background: repeating-linear-gradient(
+      #0000008f,
+      #00000091 5px,
+      #8a8a8aa9 5px,
+      #8080809f 10px
+    );
+    position: absolute;
+    transform: translate(5%, 10%);
+    box-shadow: inset 0 0 10px #000000;
+  }
+}
+
+.page-divider {
+  width: 70vw;
+  height: 70vh;
+  background: url("../../public/images/divider/mumbai-divider.jpg");
+  background-size: 150%;
+  background-position: 50% 50%;
+  position: relative;
+  z-index: 2;
+  transition: all 0.5s ease-out;
+  overflow: hidden;
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-info-text {
+  background-color: #000000b6;
+  text-align: center;
+  padding: 100px 0;
+
+  h1 {
+    color: var(--red-primary);
+    font-size: 100px;
+  }
+  h2 {
+    color: var(--white-primary);
+    font-size: 70px;
+    margin-bottom: 50px;
+  }
+  p {
+    font-size: 40px;
+    width: 70%;
+    margin: auto;
+    color: var(--white-primary);
+  }
+}
+
+.page-info-text * {
+  margin: 0;
+}
+
+#id-page-divider.hidden {
+  opacity: 1;
+  transform: translate(5%, 10%);
+
+  h1,
+  h2,
+  p {
+    opacity: 0;
+    transform: scale(0.3);
+    transition: 0.5s ease;
+  }
+}
+
+#id-page-divider.show {
+  opacity: 1;
+  transform: translate(0%, 0%);
+
+  h1,
+  h2,
+  p {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.page-desc-heading {
+  font-size: 100px;
+  text-align: center;
+  margin: 0;
+}
+
+.page-desc-text {
+  font-size: 40px;
+  text-align: center;
+  width: 80%;
+  margin: 50px auto;
+  font-weight: 300;
+}
+
+.mid-page-heading {
+  font-size: 80px;
+  text-align: center;
+  color: var(--red-primary);
+  /* margin: 50px 0; */
+}
+
+@media only screen and (max-width: 1800px) {
+  .page-divider {
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 1550px) {
+  .page-info-text {
+    h1 {
+      color: var(--red-primary);
+      font-size: 60px;
+    }
+    h2 {
+      color: var(--white-primary);
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 30px;
+      width: 70%;
+      color: var(--white-primary);
+    }
+  }
+  
+}
+
+@media only screen and (max-width: 840px) {
+  .mid-page-heading,
+  .page-desc-heading {
+    font-size: 45px;
+  }
+
+  .mid-page-heading {
+    text-align: center;
+  }
+
+  .page-desc-text {
+    font-size: 24px;
+  }
+
+  .page-info-text {
+    h1 {
+      color: var(--red-primary);
+      font-size: 60px;
+    }
+    h2 {
+      color: var(--white-primary);
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 20px;
+      width: 70%;
+      color: var(--white-primary);
+    }
+  }
+
+  .page-divider {
+    height: 50vh;
+    width: 90vw;
+  }
+
+  #page-info-image-container {
+    .page-info-image-background {
+      height: 50vh;
+      width: 90vw;
+      transform: translate(2%, 10%);
+    }
+  }
+  .page-info-container {
+    #page-info-image-container {
+      height: fit-content;
+      padding: 10vh 0 15vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .page-info-text {
+    h1 {
+      color: var(--red-primary);
+      font-size: 50px;
+    }
+    h2 {
+      color: var(--white-primary);
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      width: 70%;
+      color: var(--white-primary);
+    }
+  }
+
+  .page-divider {
+    height: 50vh;
+    width: 90vw;
+  }
+
+  #page-info-image-container {
+    .page-info-image-background {
+      height: 50vh;
+      width: 90vw;
+      transform: translate(2%, 10%);
+    }
+  }
+
+  .page-info-container {
+    height: fit-content;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .page-info-text {
+    h1 {
+      color: var(--red-primary);
+      font-size: 40px;
+    }
+    h2 {
+      color: var(--white-primary);
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 14px;
+      width: 70%;
+      color: var(--white-primary);
+    }
+  }
+}

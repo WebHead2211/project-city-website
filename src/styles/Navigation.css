@@ -1,0 +1,33 @@
+#navigation-container {
+  width: 100vw;
+  height: 10vh;
+  background-color: var(--white-primary);
+  display: grid;
+  place-items: center;
+
+  li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: var(--raleway);
+    margin-right: 20px;
+    font-weight: 700;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--blue-primary);
+    transition: all 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--red-primary);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #navigation-container {
+    a {
+      font-size: 12px;
+    }
+  }
+}

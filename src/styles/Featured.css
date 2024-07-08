@@ -1,0 +1,133 @@
+#featured-container {
+  height: max-content;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  background-color: var(--blue-primary);
+  padding: 50px 0 150px;
+
+  #featured-title {
+    height: 60vh;
+    width: 35vw;
+    background-size: cover;
+    background-position: 70% 50%;
+    position: relative;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: var(--white-primary);
+      font-size: 120px;
+      text-align: center;
+      text-shadow: 0px 0px 5px black;
+    }
+  }
+
+  #featured-slider {
+    height: 60vh;
+    width: 40vw;
+    position: relative;
+    bottom: 20px;
+    box-shadow: 0 0 5px black;
+
+    h2 {
+      color: var(--white-primary);
+      margin: 0;
+      font-size: 50px;
+    }
+  }
+}
+
+#featured-title {
+  border-radius: 12px;
+  box-shadow: 0 0 10px black;
+}
+
+@media only screen and (max-width: 1910px) {
+  #featured-container {
+    flex-direction: column;
+    gap: 100px;
+    #featured-title,
+    #featured-slider {
+      width: 80vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  #featured-container {
+    flex-direction: column;
+    height: fit-content;
+    width: 100vw;
+    gap: 100px;
+    #featured-title {
+      height: 70vh;
+      width: 70vw;
+      text-align: center;
+
+      h1 {
+        font-size: 80px;
+      }
+    }
+    #featured-slider {
+      height: 70vh;
+      width: 70vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #featured-container {
+    padding-bottom: 250px;
+    #featured-title,
+    #featured-slider {
+      height: 60vh;
+      width: 80vw;
+    }
+  }
+  .featured-title-text-container {
+    flex-direction: column;
+    align-items: center;
+    p {
+      position: relative;
+    }
+    .learn-more {
+      right: 0;
+    }
+  }
+
+  .slider-title {
+    text-align: center;
+    color: black;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  #featured-container {
+    padding-bottom: 15vh;
+    #featured-title {
+      h1 {
+        font-size: 50px;
+      }
+    }
+    #featured-title,
+    #featured-slider {
+      height: 30vh;
+    }
+
+    #featured-slider {
+      h2 {
+        margin-top: 20px;
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+  }
+}

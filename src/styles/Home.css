@@ -1,0 +1,123 @@
+.top-title-container h1 {
+  font-size: var(--mainHeading);
+}
+
+.top-title-container h2 {
+  font-size: var(--subHeading);
+}
+
+.top-title-container * {
+  margin: 0;
+}
+
+#complete-map-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--blue-primary);
+  /* align-items: center; */
+  padding-top: 10vh;
+
+  .complete-map,
+  .complete-map-pages {
+    width: 40%;
+    height: 75%;
+  }
+
+  .complete-map-pages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    .complete-page-container {
+      width: 100%;
+      height: 33%;
+      border-radius: 12px;
+      background-size: 100%;
+      background-position: 50% 50%;
+      transition: 0.5s ease;
+      display: grid;
+      place-content: center;
+
+      h1 {
+        color: var(--white-primary);
+        text-align: center;
+        font-size: 80px;
+        text-shadow: 0 0 20px black;
+        pointer-events: none;
+      }
+    }
+    /* 
+        .complete-page-container:hover {
+            background-size: 110%;
+        } */
+
+    .complete-page-container.active {
+      background-size: 110%;
+      box-shadow: 0px 0px 10px black;
+
+      h1 {
+        color: var(--red-primary);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #complete-map-container {
+    .complete-map-pages {
+      .complete-page-container {
+        h1 {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  /* #complete-map-container {
+    flex-direction: column;
+    padding: 10vh 0 20vh;
+    height: 100vh;
+    align-items: center;
+
+    .complete-map,
+    .complete-map-pages {
+      width: 80%;
+    }
+
+    .complete-map {
+      height: 50vh;
+    }
+  } */
+
+  #complete-map-container {
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blue-primary);
+    padding: 10vh 0;
+  
+    .complete-map,
+    .complete-map-pages {
+      width: 80%;
+      height: 75%;
+    }
+  }
+}
+
+@media only screen and (max-width: 460px) {
+    #complete-map-container {
+        margin-bottom: 10vh;
+      .complete-map-pages {
+        .complete-page-container {
+          h1 {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,13 @@
+footer {
+  bottom: 0;
+  width: 100vw;
+  transform: translate(0, 100%);
+  display: flex;
+  justify-content: center;
+  color: var(--white-primary);
+}
+
+footer.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}

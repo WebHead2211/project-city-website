@@ -1,0 +1,127 @@
+#slider {
+  position: relative;
+  height: 70vh;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  top: -30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px black;
+
+  .slider-item {
+    position: absolute;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: scale(0);
+    z-index: 0;
+
+    a {
+      width: 100%;
+    }
+
+    h1 {
+      color: var(--white-primary);
+      position: absolute;
+      top: 10%;
+      margin: 0;
+      left: 20px;
+      transform: translateY(-50%);
+      z-index: 3;
+    }
+
+    #slider-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      filter: blur(10px);
+      background-size: cover;
+      /* background-image: url("../../public/images/hotels/hyatt-regency.jpg"); */
+    }
+
+    .slider-item-content {
+      position: relative;
+
+      img {
+        width: 100%;
+        aspect-ratio: 5 / 3;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .slider-item.active {
+    opacity: 1;
+    transform: translate(0);
+    z-index: 3;
+  }
+
+  .slider-item.next {
+    opacity: 1;
+    transform: translateX(100%);
+    z-index: 2;
+  }
+
+  .slider-item.prev {
+    opacity: 1;
+    transform: translateX(-100%);
+    z-index: 1;
+  }
+
+  .slider-arrow-button {
+    position: absolute;
+    z-index: 3;
+    font-family: var(--raleway);
+    font-weight: 700;
+    font-size: 30px;
+    transform: scaleY(2) scaleX(1.5);
+    color: var(--white-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .slider-arrow-button:hover {
+    color: rgb(207, 207, 207);
+  }
+
+  #arrow-next {
+    right: 10px;
+  }
+
+  #arrow-prev {
+    left: 10px;
+  }
+
+  #slider-circle-button-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+
+    .slider-circle-button {
+      height: 20px;
+      width: 20px;
+      background-color: rgba(255, 255, 255, 0.568);
+      z-index: 3;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .slider-circle-button.active {
+      background-color: rgb(255, 255, 255);
+    }
+  }
+}

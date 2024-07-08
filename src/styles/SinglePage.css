@@ -1,0 +1,166 @@
+.single-page-container {
+  margin: 10vh 0;
+  padding: 100px 0 50px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.single-page-main {
+  width: min(1400px, 80vw);
+  /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; */
+}
+
+.single-page-nav {
+  ul {
+    padding-left: 0;
+    display: flex;
+    list-style-type: none;
+    gap: 5px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+.single-page-heading {
+  color: var(--red-primary);
+  font-size: 8vmin;
+  margin: 50px 0 20px;
+}
+
+.single-page-subHeading {
+  color: var(--blue-primary);
+  font-weight: 600;
+  font-size: 40px;
+  margin: 2vmin 0 0 0;
+  text-transform: uppercase;
+}
+
+.single-page-para {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.image-map-container {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  margin-bottom: 50px;
+}
+
+.image-map-container > div {
+  height: 100%;
+  box-shadow: 0px 0px 5px black;
+}
+
+.single-page-gallery {
+  width: 50%;
+  background: coral;
+}
+
+.single-page-map {
+  width: 50%;
+  background: cornflowerblue;
+}
+
+.single-page-content {
+  display: flex;
+
+  .left {
+    padding-right: 50px;
+    text-align: justify;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .address-container {
+      padding-left: 30px;
+      border-left: 8px solid rgb(197, 197, 197);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 30px;
+
+      a:hover {
+        translate: 1% -10%;
+      }
+    }
+
+    .address {
+      margin-top: 0;
+      max-width: 30%;
+    }
+
+    .hours {
+      h3,
+      p {
+        margin: 0;
+      }
+    }
+
+    .save-map-button {
+      display: flex;
+      justify-content: flex-end;
+      gap: 30px;
+
+      button {
+        font-size: 18px;
+        border: none;
+        background-color: transparent;
+        text-transform: uppercase;
+        color: rgb(94, 94, 94);
+      }
+    }
+  }
+}
+
+.single-page-content > div {
+  width: 50%;
+}
+
+#save-button {
+  #solid-heart {
+    display: none;
+    color: var(--red-primary);
+  }
+
+  #heart {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .image-map-container {
+    flex-direction: column;
+    height: 80vh;
+
+    .single-page-gallery,
+    .single-page-map {
+      width: 100%;
+      height: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .single-page-content {
+    flex-direction: column;
+    align-items: center;
+    div {
+      width: 100%;
+    }
+    .left {
+      text-align: center;
+      padding-right: 0;
+    }
+
+    .right h2 {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.map-full-page {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: red;
+    z-index: 30;
+    /* opacity: 0;
+    transform: scale(0.6);
+    pointer-events: none; */
+    transition: 0.3s ease;
+    /* opacity: 1;
+    transform: scale(1); */
+    pointer-events: all;
+    animation: appear 0.5s ease 1 forwards;
+}
+
+/* .map-full-page.show-map {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
+} */
+
+.map-close-btn {
+    all: unset;
+    font-size: 50px;
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    z-index: 10;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    100%  {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

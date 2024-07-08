@@ -1,0 +1,143 @@
+.hotel-page-container {
+  width: 100vw;
+  padding: 20vh 0 10vh;
+  margin-bottom: 10vh;
+  background-color: var(--white-primary);
+
+  h1 {
+    font-size: 60px;
+    text-align: left;
+    margin: 0;
+    width: 40%;
+    color: var(--red-primary);
+  }
+  i {
+    color: var(--red-primary);
+  }
+}
+
+.hotel-page {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.hotel-page-content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+}
+.hotel-page-slider {
+  width: 60%;
+  height: 60vh;
+  box-shadow: 0 0 10px black;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hotel-page-text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h2 {
+    color: var(--blue-primary);
+    font-size: 40px;
+    margin: 0;
+  }
+
+  p {
+    width: 80%;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.hotel-page-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 50px;
+
+  i {
+    font-size: 30px;
+  }
+}
+
+.hotel-page-btn-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+
+  button,
+  a {
+    all: unset;
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: var(--blue-primary);
+    color: var(--white-primary);
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+
+  button:hover,
+  a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px black;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .hotel-page-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hotel-page-slider,
+  .hotel-page-text {
+    width: 100%;
+  }
+  .hotel-page-text {
+    p {
+      width: 100%;
+    }
+  }
+  .hotel-page-btn-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 80%;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .hotel-page-name {
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 50px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .hotel-page-name {
+    h1 {
+      font-size: 40px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
