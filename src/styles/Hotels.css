@@ -86,7 +86,7 @@
     width: 100vw;
     padding: 0 30%;
 
-    #filter-container {
+    .filter-container {
         display: flex;
         align-items: center;
         div {

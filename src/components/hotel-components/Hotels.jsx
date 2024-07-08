@@ -185,7 +185,7 @@ export default function Hotels() {
       </div>
       <div id="hotel-list-container">
         <div className="filter-sort-container">
-          <div id="filter-container">
+          <div className="filter-container">
             <h2
               className="filter-title active"
               onClick={(e) => {

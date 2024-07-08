@@ -9,23 +9,32 @@ import SinglePage from "./components/other-components/SinglePage";
 import Restaurant from "./components/restaurant-components/Restaurant";
 import SingleHotelPage from "./components/hotel-components/SingleHotelPage";
 import Smart from "./components/other-components/Smart";
+import { HashRouter } from "react-router-dom";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/project-city-website/" element={<Home />} />
-        <Route path="/project-city-website/about" element={<About />} />
-        <Route path="/project-city-website/hotel" element={<Hotels />} />
-        <Route path="/project-city-website/hotel/:id" element={<SingleHotelPage />} />
-        <Route path="/project-city-website/activity" element={<Activity />} />
-        <Route path="/project-city-website/activity/:id" element={<SinglePage type={"activity"} />} />
-        <Route path="/project-city-website/restaurant" element={<Restaurant />} />
-        <Route path="/project-city-website/restaurant/:id" element={<SinglePage type={"restaurant"} />} />
-        <Route path="/project-city-website/smart" element={<Smart />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <>
+      <HashRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/hotel" element={<Hotels />} />
+          <Route path="/hotel/:id" element={<SingleHotelPage />} />
+          <Route path="/activity" element={<Activity />} />
+          <Route
+            path="/activity/:id"
+            element={<SinglePage type={"activity"} />}
+          />
+          <Route path="/restaurant" element={<Restaurant />} />
+          <Route
+            path="/restaurant/:id"
+            element={<SinglePage type={"restaurant"} />}
+          />
+          <Route path="/smart" element={<Smart />} />
+        </Routes>
+        <Footer />
+      </HashRouter>
+    </>
   );
 }

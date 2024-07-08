@@ -18,22 +18,23 @@ export default function Smart() {
     // document.getElementById("smart-container").scrollIntoView();
   };
 
-  useEffect(() => {
-    revealAnimation();
-  }, []);
-
+  
   const restaurantGrow = [
     { transform: "scale(0.7)", opacity: "0" },
     { transform: "scale(1)", opacity: "1" },
   ];
-
+  
   const restaurantGrowTiming = {
     duration: 500,
     iterations: 1,
     easing: "ease",
     fill: "both",
   };
-
+  
+  useEffect(() => {
+    revealAnimation();
+  }, []);
+  
   useEffect(() => {
     const restaurants = document.querySelectorAll(".animate");
     restaurants.forEach((item) => {
@@ -41,9 +42,9 @@ export default function Smart() {
     });
   }, [type]);
 
-  // useEffect(() => {
-  //   document.body.scrollTop = document.documentElement.scrollTop = 0;
-  // }, []);
+  useEffect(() => {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }, []);
 
   return (
     <>
@@ -74,14 +75,16 @@ export default function Smart() {
         {/* <div className="smart-blur"></div> */}
         <div className="smart-navigation">
           <button
-            className="smart-btn active"
+            className="smart-btn active hidden"
             onClick={(e) => smartBtn(e, "about")}
+            style={{transition: "0.5s ease"}}
           >
             <span className="sofia-sans-extra-condensed">About</span>
           </button>
           <button
-            className="smart-btn roboto-condensed"
+            className="smart-btn roboto-condensed hidden"
             onClick={(e) => smartBtn(e, "project")}
+            style={{transition: "0.5s ease"}}
           >
             <span className="sofia-sans-extra-condensed">Projects</span>
           </button>

@@ -83,8 +83,12 @@ export default function SingleHotelPage() {
           <div className="single-page-nav">
             <ul>
               <li>{"<"}</li>
+              <NavLink to={`/`}>
+                <li>Home</li>
+              </NavLink>
+              <li>{"<"}</li>
               <NavLink to={`/hotel`}>
-                <li>Back</li>
+                <li style={{ textTransform: "capitalize" }}>Hotel</li>
               </NavLink>
             </ul>
           </div>
