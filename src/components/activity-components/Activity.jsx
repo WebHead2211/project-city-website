@@ -104,7 +104,7 @@ export default function Activity() {
               >
                 <h1>{item.name}</h1>
                 <p>{item.shortDescription}</p>
-                <NavLink to={`/activity/${item.id}`} key={item.id}>
+                <NavLink to={`project-city-website/activity/${item.id}`} key={item.id}>
                   <button>More Details</button>
                 </NavLink>
               </div>

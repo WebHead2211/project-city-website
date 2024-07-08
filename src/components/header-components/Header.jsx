@@ -45,7 +45,7 @@ export default function Header() {
         <div className="burger-line"></div>
         <div className="burger-line"></div>
       </div>
-      <NavLink to="/">
+      <NavLink to="/project-city-website/">
         <div id="logo" className="hidden" style={{transition: "0.5s ease"}}>
           <div id="logo-filter"></div>
         </div>
@@ -53,7 +53,7 @@ export default function Header() {
       <ul id="nav-list" className={active}>
       <li className="hidden" style={{ transition: "0.5s ease" }}>
           <NavLink
-            to="/"
+            to="/project-city-website/"
             onClick={() => {
               setActive(undefined);
             }}
@@ -63,7 +63,7 @@ export default function Header() {
         </li>
         <li className="hidden" style={{ transition: "0.5s ease" }}>
           <NavLink
-            to="/smart"
+            to="/project-city-website/smart"
             onClick={() => {
               setActive(undefined);
             }}
@@ -73,7 +73,7 @@ export default function Header() {
         </li>
         <li className="hidden" style={{ transition: "0.5s ease" }}>
           <NavLink
-            to="/hotel"
+            to="/project-city-website/hotel"
             onClick={() => {
               setActive(undefined);
             }}
@@ -83,7 +83,7 @@ export default function Header() {
         </li>
         <li className="hidden" style={{ transition: "0.5s ease" }}>
           <NavLink
-            to="/activity"
+            to="/project-city-website/activity"
             onClick={() => {
               setActive(undefined);
             }}
@@ -93,7 +93,7 @@ export default function Header() {
         </li>
         <li className="hidden" style={{ transition: "0.5s ease" }}>
           <NavLink
-            to="/restaurant"
+            to="/project-city-website/restaurant"
             onClick={() => {
               setActive(undefined);
             }}
