@@ -55,11 +55,15 @@ export default function Activity() {
       <PageTop
         title={"Things to do"}
         subTitle={"Explore Mumbai's Best"}
-        gallery={false}
         id="page-top-container"
       >
         <img
           src="./images/activities/activities-1.jpg"
+          alt="Mumbai"
+          className="home-image"
+        />
+        <img
+          src="https://www.whileimyoung.com/wp-content/uploads/2019/12/mumbai2_hotel.jpg"
           alt="Mumbai"
           className="home-image"
         />
