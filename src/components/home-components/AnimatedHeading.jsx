@@ -70,7 +70,7 @@ export default function AnimatedHeading({ heading, subHeading, dynamicWords }) {
         }}
       >
         {`${subHeading[0]} `}
-        <span className="lobster-regular">{`${span}`}</span>
+        <span style={{textShadow: "none"}} className="lobster-regular">{`${span}`}</span>
         {` ${subHeading[1]}`}
       </h2>
     </>

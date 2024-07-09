@@ -17,7 +17,26 @@ export default function Footer() {
     prevScrollpos = currentScrollPos;
   });
 
-  useEffect(() => {}, []);
+  const [dataInfo, setDataInfo] = useState();
+
+  async function forecast(query) {
+    try {
+      const data = await fetch(
+        `https://api.weatherapi.com/v1/forecast.json?key=ee972bd4adba466aa63145904232207&q=${query}`,
+        {
+          mode: "cors",
+        }
+      );
+      const info = await data.json();
+      setDataInfo(info);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    forecast("Mumbai");
+  }, []);
 
   return (
     <footer className="" style={{ display: "flex", alignItems: "center" }}>
@@ -42,8 +61,17 @@ export default function Footer() {
           <p>Aayush Bakre</p>
         </div>
         <div className="weather-container">
-          <i class="fa-brands fa-instagram"></i>
-          <p>30°C</p>
+          {dataInfo ? (
+            <>
+              <img src={dataInfo.current.condition.icon} />
+              <p>{dataInfo.current.temp_c}°C</p>
+            </>
+          ) : (
+            <>
+              <img src={"//cdn.weatherapi.com/weather/64x64/day/353.png"} />
+              <p>28°C</p>
+            </>
+          )}
         </div>
       </div>
     </footer>
