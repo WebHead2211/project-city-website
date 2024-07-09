@@ -325,6 +325,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .smart-content {
+   padding-bottom: 20vh;
+  }
+ }
+
 @media only screen and (max-width: 600px) {
   .small-slider-div {
     height: fit-content;

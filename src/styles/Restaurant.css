@@ -95,7 +95,6 @@
   left: 50%;
   bottom: 10px;
   transform: translate(-50%);
-  
 
   i {
     transition: 0.3s ease;
@@ -135,7 +134,6 @@
   }
 }
 
-
 @media only screen and (max-width: 1847px) {
   .restaurant-item.phantom {
     display: block;
@@ -145,6 +143,12 @@
 @media only screen and (max-width: 1379px) {
   .restaurant-item.phantom {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .restaurant-list {
+    padding-bottom: 10vh;
   }
 }
 

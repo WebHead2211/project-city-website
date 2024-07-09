@@ -171,6 +171,12 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .hotel-list {
+   padding-bottom: 20vh;
+  }
+ }
+
 @media only screen and (max-width: 500px) {
   .filter-sort-container {
     h2 {

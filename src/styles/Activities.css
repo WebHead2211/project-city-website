@@ -181,6 +181,13 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+ #activity-list-container {
+  padding-bottom: 30vh;
+ }
+}
+
+
 @media only screen and (max-width: 600px) {
   #activity-list-container {
     flex-direction: column;

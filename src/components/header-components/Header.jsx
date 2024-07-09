@@ -50,7 +50,7 @@ export default function Header() {
           <div id="logo-filter"></div>
         </div>
       </NavLink>
-      <ul id="nav-list" className={active}>
+      <ul id="nav-list" className={`${active} montserrat`}>
       <li className="hidden" style={{ transition: "0.5s ease" }}>
           <NavLink
             to="/"

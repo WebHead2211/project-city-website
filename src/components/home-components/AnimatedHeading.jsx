@@ -20,7 +20,7 @@ export default function AnimatedHeading({ heading, subHeading, dynamicWords }) {
   });
 
   const addLetter = () => {
-    if(!focus) return;
+    if (!focus) return;
     if (charIndex == dynamicWords[spanIndex].length) {
       spanIndex = spanIndex < dynamicWords.length - 1 ? (spanIndex += 1) : 0;
       charIndex = 0;
@@ -53,17 +53,26 @@ export default function AnimatedHeading({ heading, subHeading, dynamicWords }) {
 
   return (
     <>
-      <h1 className="merriweather-bold hidden" style={{transition: "0.5s ease"}}>{heading}</h1>
+      <h1
+        className="merriweather-bold hidden"
+        style={{ transition: "0.5s ease" }}
+      >
+        {heading}
+      </h1>
       <h2
-        className="animated-h2 hidden"
+        className="animated-h2 hidden lobster-regular"
         style={{
           backgroundColor: "var(--red-primary)",
           borderRadius: "12px",
           boxShadow: "0px 0px 10px 0 black",
           textShadow: "none",
-          transition: "0.5s ease"
+          transition: "0.5s ease",
         }}
-      >{`${subHeading[0]} ${span} ${subHeading[1]}`}</h2>
+      >
+        {`${subHeading[0]} `}
+        <span className="lobster-regular">{`${span}`}</span>
+        {` ${subHeading[1]}`}
+      </h2>
     </>
   );
 }

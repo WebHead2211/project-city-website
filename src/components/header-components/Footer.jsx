@@ -17,25 +17,34 @@ export default function Footer() {
     prevScrollpos = currentScrollPos;
   });
 
-  // useEffect(() => {}, []);
+  useEffect(() => {}, []);
 
   return (
-    <footer
-      className=""
-      style={{ display: "flex", alignItems: "center", position: "relative" }}
-    >
-      <h1>Made by Aayush Bakre</h1>
-      <div
-        className="temperature"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          position: "absolute",
-          right: "10px",
-        }}
-      >
-        <i class="fa-solid fa-sun"></i>
-        30 C
+    <footer className="" style={{ display: "flex", alignItems: "center" }}>
+      <div className="footer-left">
+        <div
+          className="logo-container"
+          style={{
+            display: "flex",
+            gap: "20px",
+            fontSize: "30px",
+          }}
+        >
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-github"></i>
+        </div>
+      </div>
+      <div className="footer-right">
+        <div className="name-container">
+          <p>Aayush Bakre</p>
+        </div>
+        <div className="weather-container">
+          <i class="fa-brands fa-instagram"></i>
+          <p>30°C</p>
+        </div>
       </div>
     </footer>
   );

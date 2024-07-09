@@ -41,7 +41,7 @@ header a {
   color: var(--white-primary);
   text-decoration: none;
   font-size: 48px;
-  font-weight: 700;
+  /* font-weight: 700; */
 }
 
 #logo {
