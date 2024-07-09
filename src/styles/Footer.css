@@ -24,10 +24,10 @@ footer.active {
 .logo-container {
   i:hover {
     text-shadow: 0 0 5px black;
-    filter: brightness(0) saturate(100%) invert(50%) sepia(43%) saturate(5394%) hue-rotate(340deg) brightness(101%) contrast(101%);
+    filter: brightness(0) saturate(100%) invert(50%) sepia(43%) saturate(5394%)
+      hue-rotate(340deg) brightness(101%) contrast(101%);
   }
 }
-
 
 .footer-left {
   width: 40%;
@@ -41,7 +41,7 @@ footer.active {
 .footer-right {
   width: 60%;
   height: 100%;
-  display: flex; 
+  display: flex;
   justify-content: space-around;
 }
 
@@ -58,6 +58,17 @@ footer.active {
   align-items: center;
 }
 
+.name-container,
+.weather-container {
+  a {
+    transition: 0.3s ease;
+  }
+
+  a:hover {
+    text-shadow: 0 0 5px black;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   footer {
     height: 20vh;
@@ -67,7 +78,8 @@ footer.active {
     flex-direction: column;
   }
 
-  .footer-left, .footer-right {
+  .footer-left,
+  .footer-right {
     width: 100%;
   }
 }

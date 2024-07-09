@@ -49,22 +49,45 @@ export default function Footer() {
             fontSize: "30px",
           }}
         >
-          <i class="fa-brands fa-youtube"></i>
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-x-twitter"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-github"></i>
+          <a href="https://www.youtube.com/@webhead_22" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://twitter.com/Mumbai" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/mymumbai/?hl=en" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a
+            href="https://github.com/WebHead2211/project-city-website"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
         </div>
       </div>
       <div className="footer-right">
         <div className="name-container">
-          <p>Aayush Bakre</p>
+          <a
+            href="https://github.com/WebHead2211/project-city-website"
+            target="_blank"
+          >
+            Aayush Bakre
+          </a>
         </div>
         <div className="weather-container">
           {dataInfo ? (
             <>
               <img src={dataInfo.current.condition.icon} />
-              <p>{Math.floor(dataInfo.current.temp_c)}°C</p>
+              <a
+                href="https://weather.com/en-IN/weather/today/l/cb022e27867bb250b801b119170ab9889e1bc3b65e50c76798362b7f95d29248"
+                target="_blank"
+              >
+                {Math.round(dataInfo.current.temp_c)}°C
+              </a>
             </>
           ) : (
             <>
