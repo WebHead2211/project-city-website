@@ -64,7 +64,7 @@ export default function Footer() {
           {dataInfo ? (
             <>
               <img src={dataInfo.current.condition.icon} />
-              <p>{dataInfo.current.temp_c}°C</p>
+              <p>{Math.floor(dataInfo.current.temp_c)}°C</p>
             </>
           ) : (
             <>
