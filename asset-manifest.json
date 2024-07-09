@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/project-city-website/static/css/main.39302fb1.css",
-    "main.js": "/project-city-website/static/js/main.bbff0b5b.js",
+    "main.js": "/project-city-website/static/js/main.95726117.js",
     "static/media/mumbai-divider.jpg": "/project-city-website/static/media/mumbai-divider.1aab9e8a83a4096b1552.jpg",
     "static/media/mumbai-logo.png": "/project-city-website/static/media/mumbai-logo.10233c8c0a3b54d9ee26.png",
     "index.html": "/project-city-website/index.html",
     "main.39302fb1.css.map": "/project-city-website/static/css/main.39302fb1.css.map",
-    "main.bbff0b5b.js.map": "/project-city-website/static/js/main.bbff0b5b.js.map"
+    "main.95726117.js.map": "/project-city-website/static/js/main.95726117.js.map"
   },
   "entrypoints": [
     "static/css/main.39302fb1.css",
-    "static/js/main.bbff0b5b.js"
+    "static/js/main.95726117.js"
   ]
 }
